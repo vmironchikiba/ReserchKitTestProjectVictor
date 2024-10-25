@@ -1,0 +1,4 @@
+${PODS_ROOT}/Target Support Files/Pods-VictorTask1/Pods-VictorTask1-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Mantle/Mantle.framework
+${BUILT_PRODUCTS_DIR}/Realm/Realm.framework
+${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework
