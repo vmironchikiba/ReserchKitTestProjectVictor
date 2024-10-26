@@ -7,9 +7,7 @@ target 'VictorTask1' do
 
   # Pods for VictorTask1
   pod 'Mantle'
-  #pod 'Realm'
-  #, '~>10'
   pod 'RealmSwift'
-  #pod 'ResearchKit'
+  pod 'ResearchKit'
 
 end
