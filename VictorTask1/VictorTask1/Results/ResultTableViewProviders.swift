@@ -14,6 +14,7 @@ protocol ResultProviderDelegate {
     func presentShareSheet(shareSheet: UIActivityViewController)
 }
 
+
 func resultTableViewProviderForResult(_ result: ORKResult?, delegate: ResultProviderDelegate?) -> UITableViewDataSource & UITableViewDelegate {
     guard let result = result else {
         return NoRecentResultTableViewProvider()
@@ -21,6 +22,8 @@ func resultTableViewProviderForResult(_ result: ORKResult?, delegate: ResultProv
 
     
     let providerType: ResultTableViewProvider.Type
+    
+
 
     switch result {
     
@@ -110,6 +113,8 @@ func resultTableViewProviderForResult(_ result: ORKResult?, delegate: ResultProv
     
     case is ORKTaskResult:
         providerType = TaskResultTableViewProvider.self
+
+
     case is ORKCollectionResult where !(result is ORKTaskResult):
         providerType = CollectionResultTableViewProvider.self
       
@@ -136,12 +141,15 @@ func resultTableViewProviderForResult(_ result: ORKResult?, delegate: ResultProv
     return providerType.init(result: result, delegate: delegate)
 }
 
+
 enum ResultRow {
     
 
     case text(String, detail: String, selectable: Bool)
     case textImage(String, image: UIImage?)
     case image(UIImage?)
+    
+    
     
     enum TableViewCellIdentifier: String {
         case `default` =          "Default"
@@ -179,6 +187,8 @@ class NoRecentResultTableViewProvider: NSObject, UITableViewDataSource, UITableV
         return tableView.dequeueReusableCell(withIdentifier: ResultRow.TableViewCellIdentifier.noResultSet.rawValue, for: indexPath)
     }
 }
+
+
 
 class ResultTableViewProvider: NSObject, UITableViewDataSource, UITableViewDelegate {
     
@@ -239,6 +249,7 @@ class ResultTableViewProvider: NSObject, UITableViewDataSource, UITableViewDeleg
                     cell.textLabel?.textColor = UIColor.label
                     cell.detailTextLabel?.textColor = UIColor.secondaryLabel
                 }
+                
 
                 cell.selectionStyle = selectable ? .default : .none
                 cell.accessoryType = selectable ? .disclosureIndicator : .none
@@ -248,11 +259,11 @@ class ResultTableViewProvider: NSObject, UITableViewDataSource, UITableViewDeleg
             case let .textImage(text, image):
                 let cell = tableView.dequeueReusableCell(withIdentifier: ResultRow.TableViewCellIdentifier.textImage.rawValue, for: indexPath) as! TextImageTableViewCell
 
-                cell.leftTextLabel.text = text
-                cell.rightImageView.image = image
+                cell.leftTextLabel?.text = text
+                cell.rightImageView?.image = image
                 
                 if #available(iOS 13.0, *) {
-                    cell.leftTextLabel.textColor = UIColor.label
+                    cell.leftTextLabel?.textColor = UIColor.label
                 }
 
                 return cell
@@ -260,7 +271,7 @@ class ResultTableViewProvider: NSObject, UITableViewDataSource, UITableViewDeleg
             case let .image(image):
                 let cell = tableView.dequeueReusableCell(withIdentifier: ResultRow.TableViewCellIdentifier.image.rawValue, for: indexPath) as! ImageTableViewCell
 
-                cell.fullImageView.image = image
+                cell.fullImageView?.image = image
 
                 return cell
         }
@@ -492,7 +503,7 @@ class ConsentSignatureResultTableViewProvider: ResultTableViewProvider {
         return super.resultRowsForSection(section) + [
 
             ResultRow(text: "identifier", detail: signature.identifier),
-            
+
             ResultRow(text: "title", detail: signature.title),
             
             
@@ -1265,6 +1276,11 @@ class VideoInstructionStepResultTableViewProvider: ResultTableViewProvider {
     }
 }
 
+
+
+
+
+
 class WebViewStepResultTableViewProvider: ResultTableViewProvider {
     
     
@@ -1332,8 +1348,8 @@ class dBHLToneAudiometryResultTableViewProvider: ResultTableViewProvider {
             ]
         } else if section == 1 {
             guard let samples = dBHLToneAudiometryResult.samples else { return rows }
-			
-	        let sortedSamples = samples.sorted { $0.frequency < $1.frequency }
+            
+            let sortedSamples = samples.sorted { $0.frequency < $1.frequency }
             return rows + sortedSamples.map { sample in
                 return ResultRow(text: "freq: \(String(format: "%.1f",sample.frequency))", detail: "threshold: \(String(format: "%.2f", sample.calculatedThreshold)), channel: \(sample.channel == .left ? "left" : "right")", selectable: false)
             }
