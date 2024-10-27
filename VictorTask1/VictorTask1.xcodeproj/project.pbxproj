@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		110D88752CCE262D00A333BE /* ImageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 110D88742CCE262D00A333BE /* ImageTableViewCell.m */; };
+		110D88782CCE345600A333BE /* SurveyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110D88772CCE345600A333BE /* SurveyModel.swift */; };
 		1148CB552CCDF16300387BAF /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1148CB542CCDF16300387BAF /* HealthKit.framework */; };
 		1148CB632CCDF79400387BAF /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1148CB612CCDF79400387BAF /* ResultViewController.swift */; };
-		1148CB642CCDF79400387BAF /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1148CB5F2CCDF79400387BAF /* ImageTableViewCell.swift */; };
-		1148CB652CCDF79400387BAF /* TextImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1148CB622CCDF79400387BAF /* TextImageTableViewCell.swift */; };
 		1148CB662CCDF79400387BAF /* ResultTableViewProviders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1148CB602CCDF79400387BAF /* ResultTableViewProviders.swift */; };
 		1148CB6A2CCDF7F200387BAF /* SurveyListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1148CB682CCDF7F200387BAF /* SurveyListRow.swift */; };
 		1148CB6B2CCDF7F200387BAF /* SurveyListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1148CB692CCDF7F200387BAF /* SurveyListViewController.swift */; };
+		1148CB6F2CCE237900387BAF /* TextImageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1148CB6E2CCE237900387BAF /* TextImageTableViewCell.m */; };
 		11935DB82CCC4E9700983E1D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11935DAE2CCC4E9700983E1D /* AppDelegate.swift */; };
 		11935DB92CCC4E9700983E1D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11935DB52CCC4E9700983E1D /* SceneDelegate.swift */; };
 		11935DBA2CCC4E9700983E1D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11935DB62CCC4E9700983E1D /* ViewController.swift */; };
@@ -24,13 +25,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		110D88732CCE262D00A333BE /* ImageTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageTableViewCell.h; sourceTree = "<group>"; };
+		110D88742CCE262D00A333BE /* ImageTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageTableViewCell.m; sourceTree = "<group>"; };
+		110D88772CCE345600A333BE /* SurveyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyModel.swift; sourceTree = "<group>"; };
 		1148CB542CCDF16300387BAF /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
-		1148CB5F2CCDF79400387BAF /* ImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTableViewCell.swift; sourceTree = "<group>"; };
 		1148CB602CCDF79400387BAF /* ResultTableViewProviders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTableViewProviders.swift; sourceTree = "<group>"; };
 		1148CB612CCDF79400387BAF /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
-		1148CB622CCDF79400387BAF /* TextImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextImageTableViewCell.swift; sourceTree = "<group>"; };
 		1148CB682CCDF7F200387BAF /* SurveyListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyListRow.swift; sourceTree = "<group>"; };
 		1148CB692CCDF7F200387BAF /* SurveyListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyListViewController.swift; sourceTree = "<group>"; };
+		1148CB6D2CCE237900387BAF /* TextImageTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextImageTableViewCell.h; sourceTree = "<group>"; };
+		1148CB6E2CCE237900387BAF /* TextImageTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextImageTableViewCell.m; sourceTree = "<group>"; };
 		11935D962CCC4E8E00983E1D /* VictorTask1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VictorTask1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11935DAE2CCC4E9700983E1D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		11935DAF2CCC4E9700983E1D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -59,6 +63,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		110D88762CCE33E600A333BE /* RealmDB */ = {
+			isa = PBXGroup;
+			children = (
+				110D88772CCE345600A333BE /* SurveyModel.swift */,
+			);
+			path = RealmDB;
+			sourceTree = "<group>";
+		};
 		1148CB562CCDF71F00387BAF /* Results */ = {
 			isa = PBXGroup;
 			children = (
@@ -81,8 +93,10 @@
 		1148CB6C2CCE144200387BAF /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				1148CB5F2CCDF79400387BAF /* ImageTableViewCell.swift */,
-				1148CB622CCDF79400387BAF /* TextImageTableViewCell.swift */,
+				1148CB6D2CCE237900387BAF /* TextImageTableViewCell.h */,
+				1148CB6E2CCE237900387BAF /* TextImageTableViewCell.m */,
+				110D88732CCE262D00A333BE /* ImageTableViewCell.h */,
+				110D88742CCE262D00A333BE /* ImageTableViewCell.m */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -116,6 +130,7 @@
 				11935DB42CCC4E9700983E1D /* Main.storyboard */,
 				11935DB52CCC4E9700983E1D /* SceneDelegate.swift */,
 				11935DB62CCC4E9700983E1D /* ViewController.swift */,
+				110D88762CCE33E600A333BE /* RealmDB */,
 				1148CB672CCDF7D100387BAF /* Survey */,
 				1148CB562CCDF71F00387BAF /* Results */,
 			);
@@ -258,13 +273,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				110D88752CCE262D00A333BE /* ImageTableViewCell.m in Sources */,
+				1148CB6F2CCE237900387BAF /* TextImageTableViewCell.m in Sources */,
 				11935DB82CCC4E9700983E1D /* AppDelegate.swift in Sources */,
+				110D88782CCE345600A333BE /* SurveyModel.swift in Sources */,
 				1148CB6A2CCDF7F200387BAF /* SurveyListRow.swift in Sources */,
 				1148CB6B2CCDF7F200387BAF /* SurveyListViewController.swift in Sources */,
 				11935DB92CCC4E9700983E1D /* SceneDelegate.swift in Sources */,
 				1148CB632CCDF79400387BAF /* ResultViewController.swift in Sources */,
-				1148CB642CCDF79400387BAF /* ImageTableViewCell.swift in Sources */,
-				1148CB652CCDF79400387BAF /* TextImageTableViewCell.swift in Sources */,
 				1148CB662CCDF79400387BAF /* ResultTableViewProviders.swift in Sources */,
 				11935DBA2CCC4E9700983E1D /* ViewController.swift in Sources */,
 			);
