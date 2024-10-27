@@ -15,6 +15,8 @@
 		1148CB6A2CCDF7F200387BAF /* SurveyListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1148CB682CCDF7F200387BAF /* SurveyListRow.swift */; };
 		1148CB6B2CCDF7F200387BAF /* SurveyListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1148CB692CCDF7F200387BAF /* SurveyListViewController.swift */; };
 		1148CB6F2CCE237900387BAF /* TextImageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1148CB6E2CCE237900387BAF /* TextImageTableViewCell.m */; };
+		116BF4D02CCE7A08009B91AE /* DBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 116BF4CF2CCE7A08009B91AE /* DBManager.m */; };
+		116BF4D22CCE9AFC009B91AE /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116BF4D12CCE9AFC009B91AE /* DBManager.swift */; };
 		11935DB82CCC4E9700983E1D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11935DAE2CCC4E9700983E1D /* AppDelegate.swift */; };
 		11935DB92CCC4E9700983E1D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11935DB52CCC4E9700983E1D /* SceneDelegate.swift */; };
 		11935DBA2CCC4E9700983E1D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11935DB62CCC4E9700983E1D /* ViewController.swift */; };
@@ -35,6 +37,9 @@
 		1148CB692CCDF7F200387BAF /* SurveyListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyListViewController.swift; sourceTree = "<group>"; };
 		1148CB6D2CCE237900387BAF /* TextImageTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextImageTableViewCell.h; sourceTree = "<group>"; };
 		1148CB6E2CCE237900387BAF /* TextImageTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextImageTableViewCell.m; sourceTree = "<group>"; };
+		116BF4CE2CCE7A08009B91AE /* DBManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DBManager.h; sourceTree = "<group>"; };
+		116BF4CF2CCE7A08009B91AE /* DBManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DBManager.m; sourceTree = "<group>"; };
+		116BF4D12CCE9AFC009B91AE /* DBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
 		11935D962CCC4E8E00983E1D /* VictorTask1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VictorTask1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11935DAE2CCC4E9700983E1D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		11935DAF2CCC4E9700983E1D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -67,6 +72,9 @@
 			isa = PBXGroup;
 			children = (
 				110D88772CCE345600A333BE /* SurveyModel.swift */,
+				116BF4D12CCE9AFC009B91AE /* DBManager.swift */,
+				116BF4CE2CCE7A08009B91AE /* DBManager.h */,
+				116BF4CF2CCE7A08009B91AE /* DBManager.m */,
 			);
 			path = RealmDB;
 			sourceTree = "<group>";
@@ -274,12 +282,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				110D88752CCE262D00A333BE /* ImageTableViewCell.m in Sources */,
+				116BF4D22CCE9AFC009B91AE /* DBManager.swift in Sources */,
 				1148CB6F2CCE237900387BAF /* TextImageTableViewCell.m in Sources */,
 				11935DB82CCC4E9700983E1D /* AppDelegate.swift in Sources */,
 				110D88782CCE345600A333BE /* SurveyModel.swift in Sources */,
 				1148CB6A2CCDF7F200387BAF /* SurveyListRow.swift in Sources */,
 				1148CB6B2CCDF7F200387BAF /* SurveyListViewController.swift in Sources */,
 				11935DB92CCC4E9700983E1D /* SceneDelegate.swift in Sources */,
+				116BF4D02CCE7A08009B91AE /* DBManager.m in Sources */,
 				1148CB632CCDF79400387BAF /* ResultViewController.swift in Sources */,
 				1148CB662CCDF79400387BAF /* ResultTableViewProviders.swift in Sources */,
 				11935DBA2CCC4E9700983E1D /* ViewController.swift in Sources */,

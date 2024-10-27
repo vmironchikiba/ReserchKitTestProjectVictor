@@ -4,3 +4,4 @@
 
 #import "TextImageTableViewCell.h"
 #import "ImageTableViewCell.h"
+#import "DBManager.h"
