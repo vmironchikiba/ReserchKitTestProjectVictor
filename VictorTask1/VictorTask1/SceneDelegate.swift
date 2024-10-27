@@ -6,17 +6,43 @@
 //
 
 import UIKit
-
+import RealmSwift
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
 
+    var tabBarController: UITabBarController {
+        return window!.rootViewController as! UITabBarController
+    }
+    
+    var taskListViewController: SurveyListViewController {
+        let navigationController = tabBarController.viewControllers!.first as! UINavigationController
+        return navigationController.visibleViewController as! SurveyListViewController
+    }
+    
+    var resultViewController: ResultViewController? {
+        let navigationController = tabBarController.viewControllers![1] as! UINavigationController
+
+        // Find the `ResultViewController` (if any) that's a view controller in the navigation controller.
+        return navigationController.viewControllers.first(where: { (someVC) -> Bool in
+            someVC is ResultViewController
+        }) as? ResultViewController
+    }
+
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
-        // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
-        // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-        guard let _ = (scene as? UIWindowScene) else { return }
+        taskListViewController.taskResultFinishedCompletionHandler = { [unowned self] taskResult in
+            /*
+                If we're displaying a new result, make sure the result view controller's
+                navigation controller is at the root.
+            */
+            if let navigationController = self.resultViewController?.navigationController {
+                navigationController.popToRootViewController(animated: false)
+            }
+
+            // Set the result so we can display it.
+            self.resultViewController?.result = taskResult
+        }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
