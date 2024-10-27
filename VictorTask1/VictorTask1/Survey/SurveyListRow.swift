@@ -47,7 +47,7 @@ enum SurveyListRow: Int, CustomStringConvertible {
             TaskListRowSection(title: "Onboarding", rows:
                 [
                     .userCreation,
-                    .eligibilityTask,
+//                    .eligibilityTask,
                 ]),
         ]
         
@@ -95,7 +95,7 @@ enum SurveyListRow: Int, CustomStringConvertible {
         case eligibilityEligibleStep
         
         
-        case accountCreationTask
+        case userCreationTask
         case waitStep
         case verificationStep
 
@@ -242,28 +242,28 @@ enum SurveyListRow: Int, CustomStringConvertible {
             interestFormItem
         ]
         
-        let waitTitle = NSLocalizedString("Creating user", comment: "")
-        let waitText = NSLocalizedString("Please wait while we upload your data", comment: "")
-        let waitStep = ORKWaitStep(identifier: String(describing: Identifier.waitStep))
-        waitStep.title = waitTitle
-        waitStep.text = waitText
+//        let waitTitle = NSLocalizedString("Creating user", comment: "")
+//        let waitText = NSLocalizedString("Please wait while we upload your data", comment: "")
+//        let waitStep = ORKWaitStep(identifier: String(describing: Identifier.waitStep))
+//        waitStep.title = waitTitle
+//        waitStep.text = waitText
         
-        class VerificationViewController: ORKVerificationStepViewController {
-            override func resendEmailButtonTapped() {
-                let alertTitle = NSLocalizedString("Resend Verification Email", comment: "")
-                let alertMessage = NSLocalizedString("Button tapped", comment: "")
-                let alert = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: UIAlertController.Style.alert)
-                alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-                self.present(alert, animated: true, completion: nil)
-            }
-        }
+//        class VerificationViewController: ORKVerificationStepViewController {
+//            override func resendEmailButtonTapped() {
+//                let alertTitle = NSLocalizedString("Resend Verification Email", comment: "")
+//                let alertMessage = NSLocalizedString("Button tapped", comment: "")
+//                let alert = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: UIAlertController.Style.alert)
+//                alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+//                self.present(alert, animated: true, completion: nil)
+//            }
+//        }
+//        
+//        let verificationStep = ORKVerificationStep(identifier: String(describing: Identifier.verificationStep), text: exampleEmailText, verificationViewControllerClass: VerificationViewController.self)
         
-        let verificationStep = ORKVerificationStep(identifier: String(describing: Identifier.verificationStep), text: exampleEmailText, verificationViewControllerClass: VerificationViewController.self)
-        
-        return ORKOrderedTask(identifier: String(describing: Identifier.accountCreationTask), steps: [
+        return ORKNavigableOrderedTask(identifier: String(describing: Identifier.userCreationTask), steps: [
             formStep,
 //            waitStep,
-            verificationStep
+//            verificationStep
             ])
     }
 
