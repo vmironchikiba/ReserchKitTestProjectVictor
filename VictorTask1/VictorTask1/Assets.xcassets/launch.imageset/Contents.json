@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "me_min_cloaked.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
