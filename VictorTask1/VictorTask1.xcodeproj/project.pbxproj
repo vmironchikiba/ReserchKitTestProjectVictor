@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1148CB552CCDF16300387BAF /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1148CB542CCDF16300387BAF /* HealthKit.framework */; };
+		1148CB632CCDF79400387BAF /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1148CB612CCDF79400387BAF /* ResultViewController.swift */; };
+		1148CB642CCDF79400387BAF /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1148CB5F2CCDF79400387BAF /* ImageTableViewCell.swift */; };
+		1148CB652CCDF79400387BAF /* TextImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1148CB622CCDF79400387BAF /* TextImageTableViewCell.swift */; };
+		1148CB662CCDF79400387BAF /* ResultTableViewProviders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1148CB602CCDF79400387BAF /* ResultTableViewProviders.swift */; };
+		1148CB6A2CCDF7F200387BAF /* SurveyListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1148CB682CCDF7F200387BAF /* SurveyListRow.swift */; };
+		1148CB6B2CCDF7F200387BAF /* SurveyListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1148CB692CCDF7F200387BAF /* SurveyListViewController.swift */; };
 		11935DB82CCC4E9700983E1D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11935DAE2CCC4E9700983E1D /* AppDelegate.swift */; };
 		11935DB92CCC4E9700983E1D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11935DB52CCC4E9700983E1D /* SceneDelegate.swift */; };
 		11935DBA2CCC4E9700983E1D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11935DB62CCC4E9700983E1D /* ViewController.swift */; };
@@ -17,6 +24,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1148CB542CCDF16300387BAF /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		1148CB5F2CCDF79400387BAF /* ImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTableViewCell.swift; sourceTree = "<group>"; };
+		1148CB602CCDF79400387BAF /* ResultTableViewProviders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTableViewProviders.swift; sourceTree = "<group>"; };
+		1148CB612CCDF79400387BAF /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		1148CB622CCDF79400387BAF /* TextImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextImageTableViewCell.swift; sourceTree = "<group>"; };
+		1148CB682CCDF7F200387BAF /* SurveyListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyListRow.swift; sourceTree = "<group>"; };
+		1148CB692CCDF7F200387BAF /* SurveyListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyListViewController.swift; sourceTree = "<group>"; };
 		11935D962CCC4E8E00983E1D /* VictorTask1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VictorTask1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11935DAE2CCC4E9700983E1D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		11935DAF2CCC4E9700983E1D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -38,12 +52,41 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F4A456B24D30CE2FFE497A8 /* Pods_VictorTask1.framework in Frameworks */,
+				1148CB552CCDF16300387BAF /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1148CB562CCDF71F00387BAF /* Results */ = {
+			isa = PBXGroup;
+			children = (
+				1148CB6C2CCE144200387BAF /* Cells */,
+				1148CB602CCDF79400387BAF /* ResultTableViewProviders.swift */,
+				1148CB612CCDF79400387BAF /* ResultViewController.swift */,
+			);
+			path = Results;
+			sourceTree = "<group>";
+		};
+		1148CB672CCDF7D100387BAF /* Survey */ = {
+			isa = PBXGroup;
+			children = (
+				1148CB682CCDF7F200387BAF /* SurveyListRow.swift */,
+				1148CB692CCDF7F200387BAF /* SurveyListViewController.swift */,
+			);
+			path = Survey;
+			sourceTree = "<group>";
+		};
+		1148CB6C2CCE144200387BAF /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				1148CB5F2CCDF79400387BAF /* ImageTableViewCell.swift */,
+				1148CB622CCDF79400387BAF /* TextImageTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		11935D8D2CCC4E8E00983E1D = {
 			isa = PBXGroup;
 			children = (
@@ -73,6 +116,8 @@
 				11935DB42CCC4E9700983E1D /* Main.storyboard */,
 				11935DB52CCC4E9700983E1D /* SceneDelegate.swift */,
 				11935DB62CCC4E9700983E1D /* ViewController.swift */,
+				1148CB672CCDF7D100387BAF /* Survey */,
+				1148CB562CCDF71F00387BAF /* Results */,
 			);
 			path = VictorTask1;
 			sourceTree = "<group>";
@@ -89,6 +134,7 @@
 		7C2CDDD195D2451EC96207E5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1148CB542CCDF16300387BAF /* HealthKit.framework */,
 				11935DC82CCCCA4F00983E1D /* ResearchKit.framework */,
 				89DEB303563A0D58F9AE092F /* Pods_VictorTask1.framework */,
 			);
@@ -213,7 +259,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				11935DB82CCC4E9700983E1D /* AppDelegate.swift in Sources */,
+				1148CB6A2CCDF7F200387BAF /* SurveyListRow.swift in Sources */,
+				1148CB6B2CCDF7F200387BAF /* SurveyListViewController.swift in Sources */,
 				11935DB92CCC4E9700983E1D /* SceneDelegate.swift in Sources */,
+				1148CB632CCDF79400387BAF /* ResultViewController.swift in Sources */,
+				1148CB642CCDF79400387BAF /* ImageTableViewCell.swift in Sources */,
+				1148CB652CCDF79400387BAF /* TextImageTableViewCell.swift in Sources */,
+				1148CB662CCDF79400387BAF /* ResultTableViewProviders.swift in Sources */,
 				11935DBA2CCC4E9700983E1D /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
